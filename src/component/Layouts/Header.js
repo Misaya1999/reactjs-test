@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Header(){
     return(
         <>
@@ -32,7 +34,7 @@ function Header(){
                     <div className="row">
                         <div className="col-md-4 clearfix">
                             <div className="logo pull-left">
-                                <a href="index.html"><img src="{{ asset('Frontend/images/home/logo.png') }}" alt="" /></a>
+                                <a href="index.html"><img src="frontend/images/home/logo.png" /></a>
                             </div>
                             <div className="btn-group pull-right clearfix">
                                 <div className="btn-group">
@@ -60,19 +62,14 @@ function Header(){
                         <div className="col-md-8 clearfix">
                             <div className="shop-menu clearfix pull-right">
                                 <ul className="nav navbar-nav">
-                                    <li><a href="{{ route('users.account') }}"><i className="fa fa-user" /> Account</a></li>
-                                    <li><a href><i className="fa fa-star" /> Wishlist</a></li>
-                                    <li><a href="{{ route('users.checkout') }}"><i className="fa fa-crosshairs" /> Checkout</a></li>
-                                    <li><a href="{{ route('users.cart') }}">
+                                    <li><Link to="/account"><i className="fa fa-user" /> Account</Link></li>
+                                    <li><Link to="/account"><i className="fa fa-star" /> Wishlist</Link></li>
+                                    <li><Link to="/checkout"><i className="fa fa-crosshairs" /> Checkout</Link></li>
+                                    <li><Link to="/cart">
                                         <i className="fa fa-shopping-cart">
-                                        <span id="cartCount">{'{'}{'{'} session('cart') ? count(session('cart')) : 0 {'}'}{'}'}</span>
-                                        </i> Cart</a></li>
+                                        </i> Cart</Link></li>
                                     <li>
-                                    @if(Auth::check())
-                                    <a href="{{ route('users.logout') }}"><i className="fa fa-lock" /> Logout</a>
-                                    @else
-                                    <a href="{{ route('users.login.form') }}"><i className="fa fa-lock" /> Login</a>
-                                    @endif
+                                        <Link to="/login"><i className="fa fa-lock" /> Login</Link>
                                     </li>
                                 </ul>
                             </div>
@@ -94,17 +91,17 @@ function Header(){
                             </div>
                             <div className="mainmenu pull-left">
                                 <ul className="nav navbar-nav collapse navbar-collapse">
-                                    <li><a href="index.html">Home</a></li>
+                                    <li><Link to="/">Home</Link></li>
                                     <li className="dropdown"><a href="#">Shop<i className="fa fa-angle-down" /></a>
                                     <ul role="menu" className="sub-menu">
-                                        <li><a href="{{ route('users.homeProduct') }}">Products</a></li>
-                                        <li><a href="product-details.html">Product Details</a></li> 
-                                        <li><a href="{{ route('users.checkout') }}">Checkout</a></li> 
-                                        <li><a href="{{ route('users.cart') }}" className="active">Cart</a></li> 
-                                        <li><a href="login.html">Login</a></li> 
+                                        <li><Link to="/homeProduct">Products</Link></li>
+                                        <li><Link to="/productDetail">Product Details</Link></li> 
+                                        <li><Link to="/checkout">Checkout</Link></li> 
+                                        <li><Link to="/cart" className="active">Cart</Link></li> 
+                                        <li><Link to="/login">Login</Link></li> 
                                     </ul>
                                     </li> 
-                                    <li className="dropdown"><a href="{{ route('users.blog') }}">Blog<i className="fa fa-angle-down" /></a>
+                                    <li className="dropdown"><Link to="/blog">Blog<i className="fa fa-angle-down" /></Link>
                                     <ul role="menu" className="sub-menu">
                                         <li><a href>Blog List</a></li>
                                         <li><a href>Blog Single</a></li>
@@ -112,7 +109,7 @@ function Header(){
                                     </li> 
                                     <li><a href>404</a></li>
                                     <li><a href>Contact</a></li>
-                                    <li><a href="{{ route('users.search') }}">Search</a></li>
+                                    <li><Link to="/search">Search</Link></li>
                                 </ul>
                             </div>
                         </div>

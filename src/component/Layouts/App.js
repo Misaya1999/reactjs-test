@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import Footer from "./Footer";
 import Header from "./Header";
 import LeftSidebar from "./LeftSidebar";
@@ -7,9 +8,10 @@ function App() {
     <>
         <Header/>
         <LeftSidebar/>
+        <Outlet />
         <Footer/>
     </>
-  );
+  );  
 }
 
 export default App;
