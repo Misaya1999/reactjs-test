@@ -1,7 +1,6 @@
 function LeftSidebar(){
     return(
         <>
-        <div className="col-sm-3">
             <div className="left-sidebar">
                 <h2>Category</h2>
                 <div className="panel-group category-products" id="accordian">
@@ -134,7 +133,6 @@ function LeftSidebar(){
                     <img src="{{ asset('Frontend/images/home/shipping.jpg') }}" alt="" />
                 </div>
             </div>
-        </div>
         
         </>
     );

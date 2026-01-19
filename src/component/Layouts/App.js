@@ -7,8 +7,17 @@ function App() {
   return (
     <>
         <Header/>
-        <LeftSidebar/>
-        <Outlet />
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-3">
+              <LeftSidebar />
+            </div>
+
+            <div className="col-sm-9">
+              <Outlet />
+            </div>
+          </div>
+        </div>
         <Footer/>
     </>
   );  

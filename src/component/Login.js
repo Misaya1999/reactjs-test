@@ -6,7 +6,6 @@ function Login() {
           <div className="login-form">
             <h2>Login!</h2>
             <form method="POST" action="{{ route('users.login.form') }}">
-              @csrf
               <input type="email" name="email" placeholder="Email Address" />
               <input type="password" name="password" placeholder="Password" />
               <span>
@@ -18,11 +17,6 @@ function Login() {
                 <button type="button" className="btn btn-default" onclick="window.location='{{ route('users.register.form') }}'">Register</button>
                 <button type="button" className="btn btn-default" onclick="window.location='{{ route('users.forgotPassword.form') }}'">Forgot Password ?</button>
               </div>
-              @if ($errors-&gt;has('login'))
-              <div className="alert alert-danger">
-                {'{'}{'{'} $errors-&gt;first('login') {'}'}{'}'}
-              </div>
-              @endif
             </form>
           </div>
         </div>
