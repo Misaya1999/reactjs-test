@@ -10,6 +10,7 @@ import Blog from './component/Blog';
 import Home from './component/Home';
 import Account from './component/Account';
 import Login from './component/Login';
+import Vidu1 from './bai11/Vidu1';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,7 +19,7 @@ root.render(
         <Routes>
           
           <Route path="test" element={<Test />} />
-
+          <Route path="vidu1" element={<Vidu1 />} />
 
           {/* Layout có sidebar */}
           <Route element={<MainLayout />}>
