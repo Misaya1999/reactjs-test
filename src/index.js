@@ -13,6 +13,8 @@ import Login from "./component/Login";
 import Vidu1 from "./bai11/Vidu1";
 import Login1 from "./bai11/Login1";
 import Vidu2 from "./bai11/Vidu2";
+import Vidu3 from "./bai12/Vidu3";
+import A_Bai1 from "./bai31/A_Bai1";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -24,6 +26,8 @@ root.render(
           <Route path="vidu1" element={<Vidu1 />} />
           <Route path="login1" element={<Login1 />} />
           <Route path="vidu2" element={<Vidu2 />} />
+          <Route path="vidu3" element={<Vidu3 />} />
+          <Route path="a_bai1" element={<A_Bai1 />} />
 
           {/* Layout có sidebar */}
           <Route element={<MainLayout />}>
