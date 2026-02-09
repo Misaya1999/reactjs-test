@@ -18,6 +18,7 @@ import A_Bai1 from "./bai31/A_Bai1";
 import B_Bai2 from "./bai31/B_Bai2";
 import Form from "./bai13/Form";
 import FormLogin from "./bai16/FormLogin";
+import RegisterForm from "./bai32/RegisterForm";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -34,6 +35,7 @@ root.render(
           <Route path="b_bai2" element={<B_Bai2 />} />
           <Route path="form" element={<Form />} />
           <Route path="formLogin" element={<FormLogin />} />
+          <Route path="registerForm" element={<RegisterForm />} />
 
 
           {/* Layout có sidebar */}

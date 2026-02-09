@@ -35,11 +35,13 @@ function FormLogin(props) {
             errorSubmit.password = "Vui lòng nhập Password";
             flag = false;
         }
+        if(input.email != "" && input.password != ""){
+            alert ("Đăng nhập thành công");
+        }
         if(!flag){
             setError(errorSubmit);
         }
     }
-
 
     return(
         <>
