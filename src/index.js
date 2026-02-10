@@ -16,9 +16,11 @@ import Vidu2 from "./bai11/Vidu2";
 import Vidu3 from "./bai12/Vidu3";
 import A_Bai1 from "./bai31/A_Bai1";
 import B_Bai2 from "./bai31/B_Bai2";
-import Form from "./bai13/Form";
+import Form from "./bai13 (Form)/Form";
 import FormLogin from "./bai16/FormLogin";
 import RegisterForm from "./bai32/RegisterForm";
+import LoginForm from "./bai32/LoginForm";
+import Axios from "./bai18 (Axios)/Axios";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -36,6 +38,8 @@ root.render(
           <Route path="form" element={<Form />} />
           <Route path="formLogin" element={<FormLogin />} />
           <Route path="registerForm" element={<RegisterForm />} />
+          <Route path="loginForm" element={<LoginForm />} />
+          <Route path="axios" element={<Axios />} />
 
 
           {/* Layout có sidebar */}

@@ -1,4 +1,5 @@
 import { useState } from "react";
+//Vẫn sử dụng FormError của bài 16
 import FormError from "../bai16/FormError"; 
 
 function RegisterForm(props){
@@ -75,9 +76,10 @@ function RegisterForm(props){
         if(!flag){
             setError(errorSubmit);
         }else{
-            // localStorage.setItem("email", input.email);
-            // localStorage.setItem("password", input.password);
+            localStorage.setItem("email", input.email);
+            localStorage.setItem("password", input.password);
             console.log ({
+                localStorage,
                 email: input.email,
                 password: input.password,
                 sex: input.sex,
